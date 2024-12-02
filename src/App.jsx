@@ -19,6 +19,7 @@ import { productInputs, userInputs } from "../formSource.jsx";
 import "../src/style/dark.scss";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; // Import css cho react-toastify
+import Account from "./papes/Trangchu/Account.jsx";
 
 
 function App() {
@@ -59,6 +60,9 @@ function App() {
             <Route path="/thongbao" element={<ThongBao/>} />
             <Route path="/lich" element={<Lich/>} />
             <Route path="/Trangchu" element={<Trangchu/>} />
+            <Route path="/account" element={<Account/>} />
+            
+
           </Route>
         </Routes>
       </Router>

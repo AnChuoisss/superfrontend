@@ -1,6 +1,7 @@
 import React from "react";
 import "./TrangChu.scss";
 import Header from "./Header.jsx"; // Component Header đã tạo sẵn
+import Footer from "./Footer.jsx";
 
 const TrangChu = () => {
   const featuredProducts = [
@@ -33,7 +34,12 @@ const TrangChu = () => {
             ))}
           </div>
         </div>
+        
       </div>
+      
+      <div className="footer"><Footer/></div>
+      
+
     </div>
   );
 };
