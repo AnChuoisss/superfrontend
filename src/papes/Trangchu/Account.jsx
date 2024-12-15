@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "./Account.css"
 import Header from "./Header"
 const Account = () => {
@@ -22,7 +23,8 @@ const Account = () => {
   <div className="main-content">
     {/* Account Section */}
     <div id="account" className="content-section">
-      <h1>Tài khoản của tôi</h1>
+      <div className="wrap"><h1>Tài khoản của tôi</h1>
+      <Link to="/login">Đăng xuất</Link></div>
       <form>
         <label htmlFor="username">Tên đăng nhập</label>
         <input

@@ -126,4 +126,13 @@ body {
     background-color: #2a9df4;
     color: white;
   }
-  
+  .wrap{
+    display: flex;
+    justify-content: space-between   ;
+    border-bottom: 2px solid #2a9df4;
+    margin-bottom: 40px;
+}
+.wrap button{
+    height: 50px;
+    width: 200px;
+}

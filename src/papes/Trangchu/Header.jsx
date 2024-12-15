@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header className="header">
-      <div className="header-container">
+      <div><div className="header-container">
         {/* Logo góc trái */}
         <div className="top">
           <Link to="/" style={{ textDecoration: "none" }}>
@@ -38,6 +38,15 @@ const Header = () => {
             <span>Tài khoản</span>
           </Link>
         </div>
+      </div></div>
+      <div className="trangchu_navbar">
+          <ul>
+            <Link to="/Trangchu" className="action-item">Trang chủ </Link>
+            <Link to="/giam_dau" className="action-item">Giảm đau</Link>
+            <Link to ="/khang_sinh" className="action-item">Kháng sinh</Link>
+            <Link to="/vitamin" className="action-item">Vitamin</Link>
+            <Link to ="/thuoc_bo" className="action-item">Thuốc bổ</Link>
+          </ul>
       </div>
     </header>
   );

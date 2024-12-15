@@ -2,6 +2,7 @@ import React from "react";
 import "./TrangChu.scss";
 import Header from "./Header.jsx"; // Component Header đã tạo sẵn
 import Footer from "./Footer.jsx";
+import Slideshow from "./SlideShow.jsx";
 
 const TrangChu = () => {
   const featuredProducts = [
@@ -14,6 +15,7 @@ const TrangChu = () => {
   return (
     <div className="trangchu">
       <Header />
+      <Slideshow/>
       <div className="content">
         <div className="banner">
           <h1>Chào mừng đến với Medical App</h1>
@@ -38,9 +40,10 @@ const TrangChu = () => {
       </div>
       
       <div className="footer"><Footer/></div>
-      
+      {/* <Route path="/giam_dau" element={<Inventory />} /> */}
 
     </div>
+    
   );
 };
 

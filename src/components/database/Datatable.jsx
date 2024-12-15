@@ -129,13 +129,13 @@ const Datatable = () => {
 
   return (
     <div className="datatable">
-      <h2>Danh sách bệnh nhân</h2>
+      <h2>Danh sách Khách hàng</h2>
       <div className="datatableHeader">
         {/* Bộ lọc */}
         <div className="filters">
           <input
             type="text"
-            placeholder="Tìm Mã bệnh nhân hoặc Họ tên"
+            placeholder="Tìm Mã khách hàng hoặc Họ tên"
             value={filters.patientId}
             onChange={(e) => handleFilterChange(e, 'patientId')}
           />
@@ -143,7 +143,7 @@ const Datatable = () => {
 
         {/* Nút Thêm bệnh nhân */}
         <div className="actions">
-          <button onClick={() => setShowAddPatientModal(true)} className="addButton">Thêm bệnh nhân</button>
+          <button onClick={() => setShowAddPatientModal(true)} className="addButton">Thêm Khách hàng</button>
           <button onClick={handlePrint} className="printButton">In báo cáo</button>
           <button onClick={handleExportToExcel} className="exportButton">Xuất Excel</button>
         </div>

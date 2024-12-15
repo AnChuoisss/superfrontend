@@ -43,11 +43,12 @@ const Sidebar = () => {
               <span>Trang chu</span>
             </li>
           </Link>
+          
           <p className="title">Quản lý</p>
           <Link to="/users" style={{ textDecoration: "none" }}>
             <li>
               <PersonOutlineIcon className="icon" />
-              <span>Bệnh nhân</span>
+              <span>Khách hàng</span>
             </li>
           </Link>
           <Link to="/tuthuoc" style={{ textDecoration: "none" }} >
