@@ -65,14 +65,14 @@ const TrangChu = () => {
   const [searchTerm, setSearchTerm] = useState(""); // State cho tìm kiếm
 
   const featuredProducts = [
-    { id: 1, name: "Thuốc A", price: 100000, image: "https://via.placeholder.com/150" },
-    { id: 2, name: "Thuốc B", price: 200000, image: "https://via.placeholder.com/150" },
-    { id: 3, name: "Thuốc C", price: 150000, image: "https://via.placeholder.com/150" },
-    { id: 4, name: "Thuốc D", price: 180000, image: "https://via.placeholder.com/150" },
-    { id: 11, name: "Thuốc E", price: 120000, image: "https://via.placeholder.com/150" },
-    { id: 22, name: "Thuốc F", price: 220000, image: "https://via.placeholder.com/150" },
-    { id: 33, name: "Thuốc G", price: 130000, image: "https://via.placeholder.com/150" },
-    { id: 43, name: "Thuốc H", price: 170000, image: "https://via.placeholder.com/150" },
+    { id: 1, name: "Thuốc A", price: 100000, image: "https://via.placeholder.com/150",type:"thuoc" },
+    { id: 2, name: "Thuốc B", price: 200000, image: "https://via.placeholder.com/150" ,type:"thuoc"},
+    { id: 3, name: "Thuốc C", price: 150000, image: "https://via.placeholder.com/150" ,type:"thuoc"},
+    { id: 4, name: "Thuốc D", price: 180000, image: "https://via.placeholder.com/150" ,type:"thuoc"},
+    { id: 11, name: "Thuốc E", price: 120000, image: "https://via.placeholder.com/150" ,type:"thuoc"},
+    { id: 22, name: "Thuốc F", price: 220000, image: "https://via.placeholder.com/150" ,type:"thuoc"},
+    { id: 33, name: "Thuốc G", price: 130000, image: "https://via.placeholder.com/150" ,type:"thuoc"},
+    { id: 43, name: "Thuốc H", price: 170000, image: "https://via.placeholder.com/150" ,type:"thuoc"},
   ];
 
   // Lọc sản phẩm theo tên

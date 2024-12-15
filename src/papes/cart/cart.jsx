@@ -466,6 +466,7 @@ const Cart = () => {
   const totalQuantity = cart.reduce((total, item) => total + item.quantity, 0);
   // Tính tổng tiền các sản phẩm trong giỏ hàng
   const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  const a = 20000;
 
   return (
     <>
@@ -482,11 +483,11 @@ const Cart = () => {
             </div>
           ) : (
             cart.map((item) => (
-              <div className="cart-item" key={item.id}>
-                <img src={item.image} alt={item.name} />
+              <div className="cart-item" key={item.id} >
+                <img src={item.image} alt={item.name}  />
                 <div className="cart-item-details">
-                  <h3>{item.name}</h3>
-                  <p>Giá: {item.price.toLocaleString("vi-VN")} VNĐ</p>
+                  <h3 style={{fontSize:"26px"}}>{item.name}</h3>                
+                  <p style={{fontSize:"22px"}}>Giá: {item.price.toLocaleString("vi-VN")} VNĐ</p>
                   <div className="quantity-controls">
                     <button onClick={() => decreaseQuantity(item.id)}>-</button>
                     <span>{item.quantity}</span>
@@ -505,11 +506,17 @@ const Cart = () => {
         </div>
 
         {cart.length > 0 && (
-          <div className="cart-summary">
-            <h3>Thông tin thanh toán</h3>
-            <p>Tổng sản phẩm: {totalQuantity}</p>
-            <p>Tổng tiền: {totalPrice.toLocaleString("vi-VN")} VNĐ</p>
-            <button className="checkout-button">Thanh toán</button>
+          <div className="cart-summary" style={{ marginTop:"100px", height:"250px", fontWeight: "50px",paddingTop:"50px"}}>
+            <h3 style={{fontSize:"25px"}}>Thông tin thanh toán</h3>
+            <p style={{fontSize:"22px"}}>Tổng sản phẩm: {totalQuantity}</p>
+            <p style={{fontSize:"22px"}}>Giá vận chuyển: {a.toLocaleString("vi-VN")} VNĐ </p>
+            <p style={{fontSize:"22px"}}>Tổng tiền: {totalPrice.toLocaleString("vi-VN")} VNĐ</p>
+            <button
+                className="checkout-button"
+                style={{ marginTop: "40px" }}
+                onClick={() => (window.location.href = "/checkout")}>
+              Thanh toán
+            </button>
           </div>
         )}
       </div>

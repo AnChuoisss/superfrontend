@@ -171,7 +171,7 @@ import "react-toastify/dist/ReactToastify.css"; // Import css cho react-toastify
 import Cart from "./papes/cart/cart.jsx";
 import { CartProvider } from "./papes/cart/CartContext..jsx"; // Đảm bảo import đúng
 import ProductProfile from "./papes/ProductProfile/ProductProfile.jsx"; // Import ProductProfile component
-
+import CheckoutForm from "./papes/Checkform/CheckForm.jsx"; // Import CheckoutForm component
 function App() {
   const { darkMode } = useContext(DarkModeContext);
 
@@ -212,6 +212,7 @@ function App() {
               <Route path="/lich" element={<Lich />} />
               <Route path="/Trangchu" element={<Trangchu />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/checkout" element={<CheckoutForm />} />
             </Route>
           </Routes>
         </Router>
