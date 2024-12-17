@@ -59,6 +59,8 @@ import { Link } from "react-router-dom"; // Import Link để tạo liên kết
 import "./Trangchu.scss";
 import Header from "./Header";
 import { useCart } from "../cart/CartContext."; // Sửa lại import CartContext cho đúng
+import Slideshow from "./SlideShow.jsx";
+import Footer from "./Footer.jsx";
 
 const TrangChu = () => {
   const { addToCart } = useCart(); // Lấy hàm addToCart từ context
@@ -75,20 +77,19 @@ const TrangChu = () => {
     { id: 43, name: "Thuốc H", price: 170000, image: "https://via.placeholder.com/150" ,type:"thuoc"},
   ];
 
-  // Lọc sản phẩm theo tên
   const filteredProducts = featuredProducts.filter((product) =>
     product.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Hàm thêm sản phẩm vào giỏ hàng
   const themsanpham = (product) => {
-    const quantity = 1; // Mặc định số lượng là 1
-    addToCart({ ...product, quantity }); // Thêm sản phẩm vào giỏ hàng với số lượng
+    const quantity = 1; 
+    addToCart({ ...product, quantity }); 
   };
 
   return (
     <div className="trangchu">
-      <Header setSearchTerm={setSearchTerm} /> {/* Đảm bảo Header nhận props setSearchTerm để cập nhật tìm kiếm */}
+      <Header setSearchTerm={setSearchTerm} /> 
+      <Slideshow/>
       <div className="content">
         <h2>Sản phẩm nổi bật</h2>
         <div className="product-list">
@@ -104,6 +105,7 @@ const TrangChu = () => {
           ))}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
