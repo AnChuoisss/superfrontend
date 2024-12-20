@@ -1,8 +1,9 @@
 .header {
   width: 100%;
-  background-color: #f5f5f5; /* Màu nền header */
+  background-color: #ffffff; /* Màu nền header */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 50px;
+
 
   .header-container {
     max-width: 1400px; /* Giới hạn chiều rộng */
@@ -23,7 +24,7 @@
     .logo {
       font-size: 32px;
       font-weight: bold;
-      color: #6439ff;
+      color: #007bff;
       padding-left: 0; /* Bỏ padding ở đây */
     }
 
@@ -68,8 +69,6 @@
         font-size: 20px;
       }
     }
-
-
     .user-actions {
       display: flex;
       gap: 20px;
@@ -94,18 +93,33 @@
       }
     }
   }
-  .trangchu_navbar{
-    background-color:#ddd;
-    color :#333;
-    ul{
-      height: 50px;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      list-style-type:none;
-      
-    }
 
+.trangchu_navbar {
+  background-color: #f8f9fa; /* Màu nền của navbar */
+  padding: 10px 0; /* Khoảng cách trên dưới */
+  border-bottom: 1px solid #ddd; /* Đường viền dưới */
+
+  ul {
+    display: flex; /* Dùng flexbox để căn đều */
+    justify-content: space-evenly; /* Chia đều các mục */
+    list-style: none; /* Bỏ gạch đầu dòng */
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    flex: 1; /* Mỗi mục chiếm một phần bằng nhau */
+    text-align: center; /* Căn giữa chữ trong từng mục */
+    padding: 10px 0; /* Khoảng cách trên dưới */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng hover */
+
+
+    &:hover {
+      background-color: transparent; /* Màu nền khi hover */
+      color: blue; /* Màu chữ khi hover */
+      border-bottom: 5px solid blue; /* Thêm đường viền dưới màu xanh */
+    }
   }
 }
 .action-item{
@@ -119,4 +133,4 @@
         &:hover {
           color: #007bff;
         }
-}
+      }}

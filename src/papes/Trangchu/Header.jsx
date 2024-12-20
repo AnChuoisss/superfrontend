@@ -6,7 +6,7 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { Link } from "react-router-dom";
 
 
-const Header = ({ setSearchTerm }) => {
+const Header = ({ setSearchTerm, setFilterType }) => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearchChange = (e) => {
@@ -14,7 +14,11 @@ const Header = ({ setSearchTerm }) => {
   };
 
   const handleSearchSubmit = () => {
-    setSearchTerm(searchQuery); // Truyền giá trị tìm kiếm lên TrangChu
+    setSearchTerm(searchQuery); 
+  };
+
+  const handleCategoryFilter = (type) => {
+    setFilterType(type); // Truyền type để lọc sản phẩm
   };
 
   return (
@@ -22,7 +26,7 @@ const Header = ({ setSearchTerm }) => {
       <div className="header-container">
         {/* Logo góc trái */}
         <div className="top" style={{ paddingRight: "250px" }}>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/Trangchu" style={{ textDecoration: "none" }}>
             <span className="logo" style={{ paddingLeft: "20px" }}>
               Medical App
             </span>
@@ -56,15 +60,17 @@ const Header = ({ setSearchTerm }) => {
           </Link>
         </div>
       </div>
-      <div className="trangchu_navbar">
-          <ul>
-            <Link to="/Trangchu" className="action-item">Trang chủ </Link>
-            <Link to="/giam_dau" className="action-item">Giảm đau</Link>
-            <Link to ="/khang_sinh" className="action-item">Kháng sinh</Link>
-            <Link to="/vitamin" className="action-item">Vitamin</Link>
-            <Link to ="/thuoc_bo" className="action-item">Thuốc bổ</Link>
-          </ul>
-      </div>
+
+
+      <nav className="trangchu_navbar">
+        <ul>
+          <li onClick={() => handleCategoryFilter("thuoc")}>Thuốc</li>
+          <li onClick={() => handleCategoryFilter("duoc-my-pham")}>Dược mỹ phẩm</li>
+          <li onClick={() => handleCategoryFilter("thiet-bi-y-te")}>Thiết bị y tế</li>
+          <li onClick={() => handleCategoryFilter("vitamin")}>Vitamin</li>
+          <li onClick={() => handleCategoryFilter("thuc-pham-chuc-nang")}>Thực phẩm chức năng</li>
+        </ul>
+      </nav>
     </header>
   );
 };

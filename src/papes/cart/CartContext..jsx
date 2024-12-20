@@ -157,7 +157,7 @@ import React, { createContext, useContext, useState } from "react";
 // Tạo Context cho giỏ hàng
 const CartContext = createContext();
 
-// Component Provider để quản lý trạng thái giỏ hàng
+
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 

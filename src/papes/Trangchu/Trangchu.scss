@@ -1,345 +1,9 @@
-// .trangchu {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     font-family: Arial, sans-serif;
-  
-//     .content {
-//       width: 100%;
-//       padding: 20px;
-  
-//       .banner {
-//         background: linear-gradient(to right, #f8f9fa, #e9ecef);
-//         text-align: center;
-//         padding: 40px 20px;
-//         border-radius: 10px;
-//         margin-bottom: 30px;
-  
-//         h1 {
-//           font-size: 2rem;
-//           margin-bottom: 10px;
-//           color: #333;
-//         }
-  
-//         p {
-//           font-size: 1.2rem;
-//           color: #666;
-//         }
-//       }
-  
-//       .featured-products {
-//         h2 {
-//           font-size: 1.8rem;
-//           color: #333;
-//           margin-bottom: 20px;
-//           text-align: center;
-//         }
-  
-//         .product-list {
-//           display: flex;
-//           justify-content: center;
-//           flex-wrap: wrap;
-//           gap: 20px;
-  
-//           .product-item {
-//             background: #fff;
-//             border: 1px solid #ddd;
-//             border-radius: 10px;
-//             padding: 15px;
-//             text-align: center;
-//             width: 200px;
-//             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
-//             img {
-//               max-width: 100%;
-//               border-radius: 10px;
-//               margin-bottom: 10px;
-//             }
-  
-//             h3 {
-//               font-size: 1.2rem;
-//               color: #555;
-//               margin-bottom: 5px;
-//             }
-  
-//             p {
-//               font-size: 1rem;
-//               color: #777;
-//               margin-bottom: 10px;
-//             }
-  
-//             button {
-//               padding: 10px 15px;
-//               font-size: 1rem;
-//               color: #fff;
-//               background: #007bff;
-//               border: none;
-//               border-radius: 5px;
-//               cursor: pointer;
-  
-//               &:hover {
-//                 background: #0056b3;
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// .trangchu {
-//   font-family: Arial, sans-serif;
-
-//   .sidebar {
-//     width: 100%; // Chiếm toàn bộ chiều ngang
-//     background-color: #f8f9fa;
-//     padding: 10px 20px;
-//     border-bottom: 1px solid #ddd;
-
-//     ul {
-//       display: flex; // Các mục nằm ngang
-//       justify-content: space-around;
-//       list-style: none;
-//       padding: 0;
-//       margin: 0;
-
-//       li {
-//         a {
-//           text-decoration: none;
-//           color: #333;
-//           font-size: 16px;
-
-//           &:hover {
-//             color: #007bff;
-//           }
-//         }
-//       }
-//     }
-//   }
-
-//   .content {
-//     padding: 20px;
-
-//     .banner {
-//       text-align: center;
-//       margin-bottom: 30px;
-
-//       h1 {
-//         font-size: 24px;
-//         color: #333;
-//       }
-
-//       p {
-//         color: #666;
-//         margin-top: 10px;
-//       }
-//     }
-
-//     .featured-products {
-//       h2 {
-//         margin-bottom: 20px;
-//         color: #333;
-//       }
-
-//       .product-list {
-//         display: grid;
-//         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-//         gap: 20px;
-
-//         .product-item {
-//           background: #fff;
-//           border: 1px solid #ddd;
-//           border-radius: 5px;
-//           padding: 15px;
-//           text-align: center;
-
-//           img {
-//             max-width: 100%;
-//             height: auto;
-//             margin-bottom: 10px;
-//           }
-
-//           h3 {
-//             font-size: 18px;
-//             color: #333;
-//             margin: 10px 0;
-//           }
-
-//           p {
-//             color: #007bff;
-//             margin-bottom: 10px;
-//           }
-
-//           button {
-//             padding: 10px 15px;
-//             background-color: #007bff;
-//             color: white;
-//             border: none;
-//             border-radius: 5px;
-//             cursor: pointer;
-
-//             &:hover {
-//               background-color: #0056b3;
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-// .trangchu {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   padding: 20px;
-
-//   .content {
-//     max-width: 1200px;
-//     width: 100%;
-
-//     h2 {
-//       text-align: center;
-//       margin-bottom: 20px;
-//       font-size: 24px;
-//       color: #333;
-//     }
-
-//     .product-list {
-//       display: grid;
-//       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-//       gap: 20px;
-
-//       .product-item {
-//         background-color: #fff;
-//         border: 1px solid #e0e0e0;
-//         border-radius: 8px;
-//         overflow: hidden;
-//         text-align: center;
-//         transition: box-shadow 0.3s ease, transform 0.3s ease;
-
-
-//         &:hover {
-//           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-//           transform: translateY(-5px);
-//         }
-
-//         img {
-//           width: 100%;
-//           height: 180px;
-//           object-fit: cover;
-//           border-bottom: 1px solid #e0e0e0;
-//         }
-
-//         h3 {
-//           margin: 15px 0;
-//           font-size: 18px;
-//           color: #555;
-//         }
-
-//         p {
-//           font-size: 16px;
-//           color: #666;
-//         }
-
-//         button {
-//           margin: 15px 0;
-//           padding: 10px 20px;
-//           font-size: 14px;
-//           background-color: #4caf50;
-//           color: #fff;
-//           border: none;
-//           border-radius: 4px;
-//           cursor: pointer;
-//           transition: background-color 0.3s ease;
-
-//           &:hover {
-//             background-color: #45a049;
-//           }
-          
-//         }
-//       }
-//     }
-//   }
-// }
-
-// .trangchu {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   padding: 20px;
-
-//   .content {
-//     max-width: 1200px;
-//     width: 100%;
-
-//     h2 {
-//       text-align: center;
-//       margin-bottom: 20px;
-//       font-size: 24px;
-//       color: #333;
-//     }
-
-//     .product-list {
-//       display: grid;
-//       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-//       gap: 20px;
-
-//       .product-item {
-//         background-color: #fff;
-//         border: 1px solid #e0e0e0;
-//         border-radius: 8px;
-//         overflow: hidden;
-//         text-align: center;
-//         transition: box-shadow 0.3s ease, transform 0.3s ease;
-//         max-height: 450px; 
-//         max-width: 300px;
-
-//         &:hover {
-//           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-//           transform: translateY(-5px);
-//         }
-
-//         img {
-//           width: 100%;
-//           height: 180px;
-//           object-fit: cover;
-//           border-bottom: 1px solid #e0e0e0;
-//         }
-
-//         h3 {
-//           margin: 15px 0;
-//           font-size: 18px;
-//           color: #555;
-//         }
-
-//         p {
-//           font-size: 16px;
-//           color: #666;
-//         }
-
-//         button {
-//           margin: 15px 0;
-//           padding: 10px 20px;
-//           font-size: 14px;
-//           background-color: #4caf50;
-//           color: #fff;
-//           border: none;
-//           border-radius: 4px;
-//           cursor: pointer;
-//           transition: background-color 0.3s ease;
-
-//           &:hover {
-//             background-color: #45a049;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
 .trangchu {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  background-color: #ffffff;
 
   .content {
     max-width: 1200px;
@@ -373,7 +37,7 @@
         }
 
         img {
-          width: 100%;
+          width: 80%;
           height: 180px;
           object-fit: cover;
           border-bottom: 1px solid #e0e0e0;
@@ -398,25 +62,110 @@
             text-decoration: underline; /* Tạo hiệu ứng gạch dưới khi hover */
           }
         }
+      }
+    }
+  }
+}
 
-        p {
-          font-size: 16px;
-          color: #666;
-        }
+p {
+  font-size: 16px;
+  color: #666;
+}
 
-        button {
-          margin: 15px 0;
-          padding: 10px 20px;
-          font-size: 14px;
-          background-color: #007bff;
-          color: #fff;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
+button {
+  margin: 15px 0;
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 80%;
 
+}
+
+.chat-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  .chat-bubble {
+    width: 60px;
+    height: 60px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+
+  .chat-box {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 450px;
+    height: 650px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+
+    .chat-header {
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h4 {
+        margin: 0;
+        font-size: 16px;
+      }
+
+      button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    }
+
+    .chat-options {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+
+      button {
+        background-color: #f1f1f1;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #e0e0e0;
         }
       }
+    }
+
+    .chat-content {
+      padding: 10px;
+      font-size: 14px;
+      color: #333;
     }
   }
 }

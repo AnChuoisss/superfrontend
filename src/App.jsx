@@ -7,7 +7,6 @@ import DrugEntry from "../src/papes/nhapthuoc/DrugEntry.jsx";
 import MedicineCabinet from "../src/papes/tu thuoc/MedicineCabinet.jsx";
 import Inventory from "../src/papes/tonkho/Inventory.jsx";
 import Login from "../src/papes/login/Login.jsx";
-import DrugExport from "./papes/xuatthuoc/DrugExport.jsx";
 import Trangchu from "./papes/Trangchu/Trangchu.jsx";
 import Canhan from "../src/papes/canhan/canhan.jsx";
 import ThongBao from "../src/papes/thongbao/Thongbao.jsx";
