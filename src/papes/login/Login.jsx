@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import "./login.css";
 
 const Login = () => {
-    const [username, setUsername] = useState('');
+    const [phone, setphone] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false); // Thêm trạng thái loading
@@ -25,7 +25,7 @@ const Login = () => {
   
       // Giả lập thời gian tải 3 giây
       setTimeout(() => {
-        if (username === 'admin' && password === 'admin') {
+        if (phone === '0123456789' && password === 'admin') {
           toast.success('Đăng nhập thành công!');
           navigate('/'); // Redirect to the dashboard
         } else {
@@ -41,18 +41,18 @@ const Login = () => {
           <div className="loading-message">Đang tải, xin đợi một chút...</div>
         </div>
       )}
-      <div className="  -box">
+      <div className="  login-box">
         <h2>MEDICINE APP</h2>
         {error && <p className="error-message">{error}</p>}
         <form onSubmit={handleLogin}>
           <div className="input-group">
             <i className="icon-user"></i>
             <input
-          type="text"
+          type="number"
           id="username"
-          placeholder="Nhập tên người dùng"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          placeholder="Số điện thoại"
+          value={phone}
+          onChange={(e) => setphone(e.target.value)}
         />
           </div>
           <div className="input-group">
