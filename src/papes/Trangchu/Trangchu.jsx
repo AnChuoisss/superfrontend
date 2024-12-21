@@ -7,6 +7,9 @@ import { useCart } from "../cart/CartContext."; // Sửa lại import CartContex
 import Slideshow from "./SlideShow.jsx";
 import Footer from "./Footer.jsx";
 import ChatWidget from "./Chatmode.jsx";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+// thư viện react toast để thông báo 
 
 const TrangChu = () => {
   const { addToCart } = useCart(); // Lấy hàm addToCart từ context
@@ -36,6 +39,7 @@ const TrangChu = () => {
   const themsanpham = (product) => {
     const quantity = 1;
     addToCart({ ...product, quantity });
+    toast.success("Đã thêm vào giỏ hàng")
   };
 
   return (
@@ -57,7 +61,7 @@ const TrangChu = () => {
                   <Link to={`/products/${product.id}`}>{product.name}</Link>
                 </h3>
                 <p>{product.price.toLocaleString("vi-VN")} VNĐ</p>
-                <button onClick={() => themsanpham(product)}>Thêm vào giỏ hàng</button>
+                <button onClick={() => themsanpham(product) }>Thêm vào giỏ hàng</button>
               </div>
             ))
           ) : (

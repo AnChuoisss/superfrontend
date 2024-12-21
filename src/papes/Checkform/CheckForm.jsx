@@ -131,6 +131,7 @@ const CheckoutForm = () => {
           </form>
         </div>
         <div className="cart-summary">
+          <div className="tren">
           <h1 style={{textAlign: "center"}}>Thông tin thanh toán</h1>
           <p>Tổng sản phẩm: {totalQuantity}</p>
           <p>Giá vận chuyển: {shippingCost.toLocaleString("vi-VN")} VNĐ</p>
@@ -138,6 +139,10 @@ const CheckoutForm = () => {
           <p style={{ marginTop: "20px" }}>
             Tổng tiền: {totalPrice.toLocaleString("vi-VN")} VNĐ
           </p>
+          </div>
+          <div className="duoi">
+            XIn chao
+          </div>
         </div>
       </div>
       <Footer/>

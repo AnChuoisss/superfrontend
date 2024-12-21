@@ -59,6 +59,11 @@
     flex-grow: 1;
     overflow-y: auto;
     margin: 10px 0;
+    max-width: 100%; /* Hoặc giá trị cụ thể như 300px, 500px */
+    overflow: hidden; /* Ẩn phần tràn ra ngoài */
+    text-overflow: ellipsis; /* Thêm dấu "..." nếu cần (dành cho 1 dòng) */
+    white-space: normal; /* Đa dòng xuống dòng */
+    word-wrap: break-word;
   }
   
   .chat-message {

@@ -41,7 +41,7 @@ const Login = () => {
           <div className="loading-message">Đang tải, xin đợi một chút...</div>
         </div>
       )}
-      <div className="login-box">
+      <div className="  -box">
         <h2>MEDICINE APP</h2>
         {error && <p className="error-message">{error}</p>}
         <form onSubmit={handleLogin}>

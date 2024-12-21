@@ -60,20 +60,22 @@ const Cart = () => {
         {/* Hiển thị thông tin thanh toán */}
         {cart.length > 0 && (
           <div className="cart-summary">
-            <h3>Thông tin thanh toán</h3>
-            <p>Tổng sản phẩm: {totalQuantity}</p>
-            <p>Giá vận chuyển: {shippingCost.toLocaleString("vi-VN")} VNĐ</p>
-            <hr />
-            <p style={{ marginTop: "20px" }}>
-              Tổng tiền: {totalPrice.toLocaleString("vi-VN")} VNĐ
-            </p>
-            <button
-              className="checkout-button"
-              style={{ marginTop: "10px" }}
-              onClick={() => (window.location.href = "/checkout")}
-            >
-              Thanh toán
-            </button>
+       
+            <div className="duoi">
+                <h3>Thông tin thanh toán</h3>
+              <p>Tổng sản phẩm: {totalQuantity}</p>
+              <p>Giá vận chuyển: {shippingCost.toLocaleString("vi-VN")} VNĐ</p>
+              <hr />
+              <p style={{ marginTop: "20px" }}>
+                Tổng tiền: {totalPrice.toLocaleString("vi-VN")} VNĐ
+              </p>
+              <button
+                className="checkout-button"
+                style={{ marginTop: "10px" }}
+                onClick={() => (window.location.href = "/checkout")}
+              >
+                Thanh toán
+              </button></div>
           </div>
         )}
       </div>

@@ -28,7 +28,7 @@ const Slideshow = () => {
 
   return (
     <div className="wrap">
-         <div className="slideshow-container">
+         <div className="wrap__left"><div className="slideshow-container">
             <div className="slide">
                 <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
             </div>
@@ -43,11 +43,9 @@ const Slideshow = () => {
                 ></span>
                         ))}
             </div>
-                </div>
-         {/* <div className="slideshow-img">
-            <img src="https://dataconomy.com/wp-content/uploads/2022/10/NightCafe-AI-image-generator-7.jpg" alt="" />
-            <img src="https://dataconomy.com/wp-content/uploads/2022/10/NightCafe-AI-image-generator-7.jpg" alt="" />
-        </div>  */}
+          </div></div>
+         <div className="wrap__right">
+         </div>
     </div>
    
   );
