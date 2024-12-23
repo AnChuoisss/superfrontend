@@ -3,6 +3,7 @@ import { useCart } from "../cart/CartContext.";
 import { Link } from "react-router-dom";
 import "./cart.scss";
 import Header from "../Trangchu/Header"; // Import Header
+import Navbar from "../Trangchu/Navbar";
 
 const Cart = () => {
   const { cart, increaseQuantity, decreaseQuantity, removeFromCart } = useCart();
@@ -19,6 +20,7 @@ const Cart = () => {
   return (
     <>
       <Header />
+      
       <div className="cart-container">
         {/* Hiển thị danh sách sản phẩm trong giỏ */}
         <div className="cart-items">

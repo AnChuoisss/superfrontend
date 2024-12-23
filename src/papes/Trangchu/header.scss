@@ -1,8 +1,9 @@
 .header {
   width: 100%;
   background-color: #ffffff; /* Màu nền header */
+  background: url("https://cdn.nhathuoclongchau.com.vn/unsafe/1920x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/theme_web_24_12_2024_2_0541c2c062.png");
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
 
 
   .header-container {
@@ -24,7 +25,7 @@
     .logo {
       font-size: 32px;
       font-weight: bold;
-      color: #007bff;
+      color: whitesmoke;
       padding-left: 0; /* Bỏ padding ở đây */
     }
 
@@ -83,12 +84,12 @@
         align-items: center;
         gap: 5px;
         text-decoration: none;
-        color: #333;
+        color: whitesmoke;
         font-size: 20px;
         font-weight: 500;
 
         &:hover {
-          color: #007bff;
+          color: #d0d020;
         }
 
         .MuiSvgIcon-root {

@@ -36,13 +36,13 @@ const Footer = ()=>{
             <div className='ngang'></div>
             <div className='footer_last'>
                 <div className="left">
-                    <h3>Công Ty Cổ Phần Dược Phẩm Pharmacity</h3>
-                    <div>Địa chỉ: 123 Nguyễn Văn Cừ, P. Nguyễn Cư</div>
-                    <div>Điện thoại: 1800 6821 - Email: cskh@pharmacity.vn</div>
+                    <h3>Công Ty Cổ Phần Dược Phẩm Medicine PTIT</h3>
+                    <div>Địa chỉ: 12 Hoàng Quốc Việt</div>
+                    <div>Điện thoại: 1800 6821 - Email: cskh@medicineapp.vn</div>
                 </div>
                 <div className="right">
-                    <div>GCNDKDN: 0311770883 do sở KH & ĐT TP.HCM cấp lần đầu ngày 05/05/2012.</div>
-                    <div>GCNDDKKDD: 6782/DDKKDDD-ĐNai ngày cấp 26/4/2022 Sở Y Tế Tỉnh Đồng Nai.
+                    <div>GCNDKDN: 0311770883 do sở KH & ĐT Hà Nội cấp lần đầu ngày 05/05/2024.</div>
+                    <div>GCNDDKKDD: 6782/DDKKDDD-ĐNai ngày cấp 26/4/2022 Sở Y Tế Thành phố Hà Nội
 
                 </div>
                 </div>

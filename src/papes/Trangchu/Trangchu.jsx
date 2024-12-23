@@ -9,6 +9,7 @@ import Footer from "./Footer.jsx";
 import ChatWidget from "./Chatmode.jsx";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Navbar from "./Navbar.jsx";
 // thư viện react toast để thông báo 
 
 const TrangChu = () => {
@@ -45,11 +46,12 @@ const TrangChu = () => {
     <div className="trangchu">
       {/* Header */}
       <Header setSearchTerm={setSearchTerm} setFilterType={setFilterType} />
+      <Navbar setFilterType={setFilterType}/> 
 
       <Slideshow />
       <div className="content">
         <h2>Sản phẩm nổi bật</h2>
-        <div className="product-list">
+        <div className="product-list" id="product-list">
           {filteredProducts.length > 0 ? (
             filteredProducts.map((product) => (
               <div className="product-item" key={product.id}>

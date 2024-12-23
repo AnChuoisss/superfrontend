@@ -4,9 +4,10 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { Link } from "react-router-dom";
+// import Navbar from "./Navbar";
 
 
-const Header = ({ setSearchTerm, setFilterType }) => {
+const Header = ({ setSearchTerm }) => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearchChange = (e) => {
@@ -17,9 +18,7 @@ const Header = ({ setSearchTerm, setFilterType }) => {
     setSearchTerm(searchQuery); 
   };
 
-  const handleCategoryFilter = (type) => {
-    setFilterType(type); // Truyền type để lọc sản phẩm
-  };
+
 
   return (
     <header className="header">
@@ -62,16 +61,8 @@ const Header = ({ setSearchTerm, setFilterType }) => {
       </div>
 
 
-      <nav className="trangchu_navbar">
-        <ul>
-          <li onClick={() => handleCategoryFilter("thuoc")}>Thuốc</li>
-          <li onClick={() => handleCategoryFilter("duoc-my-pham")}>Dược mỹ phẩm</li>
-          <li onClick={() => handleCategoryFilter("thiet-bi-y-te")}>Thiết bị y tế</li>
-          <li onClick={() => handleCategoryFilter("vitamin")}>Vitamin</li>
-          <li onClick={() => handleCategoryFilter("thuc-pham-chuc-nang")}>Thực phẩm chức năng</li>
-        </ul>
-      </nav>
     </header>
+    
   );
 };
 
