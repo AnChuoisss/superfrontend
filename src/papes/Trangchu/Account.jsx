@@ -1,7 +1,21 @@
 import { Link } from "react-router-dom"
 import "./Account.scss"
 import Header from "./Header"
+import { useState } from "react";
+
 const Account = () => {
+
+const [formData, setFormData] = useState({
+  username: "NguyenVanA",
+  fullname: "Nguyễn Văn A",
+  email: "nguyenvana@gmail.com",
+  phone: "0123456789",
+});
+
+const handleChange = (e) => {
+  const { id, value } = e.target;
+  setFormData((prev) => ({ ...prev, [id]: value }));
+};
     return( 
        <div>
         <Header />
@@ -14,7 +28,7 @@ const Account = () => {
       <li className="active">
         <a href="#account">Tài khoản của tôi</a>
       </li>
-      <li>
+      <li className="active">
         <a href="#orders">Đơn mua</a>
       </li>
     </ul>
@@ -30,15 +44,16 @@ const Account = () => {
         <input
           type="text"
           id="username"
-          defaultValue="NguyenVanA"
-          disabled=""
+          defaultValue={formData.username}
+          disabled="true"
+          onChange={handleChange}
         />
         <label htmlFor="fullname">Tên cá nhân</label>
-        <input type="text" id="fullname" defaultValue="Nguyễn Văn A" />
+        <input type="text" id="fullname" defaultValue={formData.fullname} onChange={handleChange} />
         <label htmlFor="email">Email</label>
-        <input type="email" id="email" defaultValue="nguyenvana@gmail.com" />
+        <input type="email" id="email" defaultValue={formData.email}  onChange={handleChange} />
         <label htmlFor="phone">Số điện thoại</label>
-        <input type="tel" id="phone" defaultValue={"0123456789"} />
+        <input type="tel" id="phone" defaultValue={formData.phone}  onChange={handleChange} />
         <button type="button" className="btn-edit">
           Chỉnh sửa
         </button>
@@ -47,15 +62,33 @@ const Account = () => {
     {/* Orders Section */}
     <div id="orders" className="content-section">
       <h1>Đơn mua</h1>
-      <ul className="order-status">
-        <li>Chờ thanh toán</li>
-        <li>Vận chuyển</li>
-        <li>Chờ giao hàng</li>
-        <li>Hoàn thành</li>
-        <li>Đã hủy</li>
-        <li>Trả hàng/Hoàn tiền</li>
-      </ul>
+      <div className="order-item">
+              <img
+                src="https://via.placeholder.com/100"
+                alt="Sản phẩm"
+                className="order-image"
+              />
+              <div className="order-info">
+                <h3>Tên sản phẩm</h3>
+                <p>Giá: 500.000 VND</p>
+                <p>Trạng thái: Đã giao</p>
+              </div>
+            </div>
+            <div className="order-item">
+              <img
+                src="https://via.placeholder.com/100"
+                alt="Sản phẩm"
+                className="order-image"
+              />
+              <div className="order-info">
+                <h3>Tên sản phẩm</h3>
+                <p>Giá: 500.000 VND</p>
+                <p>Trạng thái: Đã giao</p>
+              </div>
+            </div>
+      
     </div>
+      
   </div>
 </div>
 

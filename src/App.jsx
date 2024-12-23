@@ -23,6 +23,8 @@ import { CartProvider } from "./papes/cart/CartContext..jsx"; // Đảm bảo im
 import ProductProfile from "./papes/ProductProfile/ProductProfile.jsx"; // Import ProductProfile component
 import CheckoutForm from "./papes/Checkform/CheckForm.jsx"; // Import CheckoutForm component
 import Account from "./papes/Trangchu/Account.jsx";
+import Signup from "./papes/signup/Signup.jsx";
+// import TrangChu from "./papes/Trangchu/Trangchu.jsx";
 function App() {
   const { darkMode } = useContext(DarkModeContext);
 
@@ -38,6 +40,9 @@ function App() {
             <Route path="/">
               <Route index element={<Home />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/dangky" element={<Signup/>} />
+
+              {/* <Route></Route> */}
               <Route path="/users">
                 <Route index element={<List />} />
                 <Route path=":userId" element={<Single />} />
@@ -65,6 +70,8 @@ function App() {
               <Route path="/cart" element={<Cart />} />
               <Route path="/checkout" element={<CheckoutForm />} />
               <Route path="/account" element={<Account/>} />
+              {/* <Route path="/dangky" element={<Signup/>} /> */}
+
             </Route>
           </Routes>
         </Router>

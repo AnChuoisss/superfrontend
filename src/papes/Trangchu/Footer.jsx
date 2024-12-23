@@ -25,9 +25,11 @@ const Footer = ()=>{
                 </div>
                 <div className="social_media">
                     <h3>Theo dõi chúng tôi trên</h3>
-                    <span>Facebook</span>
-                    <i></i><p>Facebook</p>
-                    <i></i><p>Facebook</p>
+                    <div><a href="https://www.facebook.com/tri.vo.863244/" className='none'>Facebook</a></div>
+                    <div><a href="https://www.facebook.com/tri.vo.863244/" className='none'>Facebook</a></div>
+                    <div><a href="https://www.facebook.com/tri.vo.863244/" className='none'>Facebook</a></div>
+
+
                 </div>
                 
             </div>

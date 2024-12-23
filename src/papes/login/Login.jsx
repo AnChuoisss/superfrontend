@@ -1,9 +1,11 @@
 // import React from "react";
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./login.scss";
+import TrangChu from '../Trangchu/Trangchu';
 
 const Login = () => {
     const [phone, setphone] = useState('');
@@ -77,8 +79,13 @@ const Login = () => {
             Login
           </button>
         </form>
+        <span>Bạn chưa có tài khoản ? <Link to="/dangky">Đăng ký</Link>
+        </span>
       </div>
+
+
     </div>
+    
   );
 };
 
