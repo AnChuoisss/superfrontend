@@ -4,6 +4,8 @@ import "./SlideShow.scss";
 const images = [
   "/slide1.webp",
   "/slide3.jpg",
+  "/Glucena.webp",
+  "/everon.webp"
 ];
 
 const Slideshow = () => {
@@ -50,10 +52,10 @@ const Slideshow = () => {
       </div>
       <div className="wrap__right">
         <div className="small-image-container">
-          <img src="/slide3.jpg" alt="Small 1" className="small-image" />
+          <img src="/thucu.webp" alt="Small 1" className="small-image" />
         </div>
         <div className="small-image-container">
-          <img src="/slide3.jpg" alt="Small 2" className="small-image" />
+          <img src="/chuyentrang.webp" alt="Small 2" className="small-image" />
         </div>
       </div>
     </div>

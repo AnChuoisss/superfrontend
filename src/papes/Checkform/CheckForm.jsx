@@ -127,7 +127,7 @@ const CheckoutForm = () => {
             </label>
             {showQRCode && (
               <div className="qr-code-section" style={{ marginBottom: "20px" }}>
-                <img src="/QR.png" alt="QR Code" />
+                <img  src="/QR.png" alt="QR Code" />
               </div>
             )}
             <button type="submit">Xác nhận</button>

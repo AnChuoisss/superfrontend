@@ -50,11 +50,11 @@
   }
   
   .small-image {
-    width: 600px; /* Kích thước ảnh nhỏ */
+    width: 500px; /* Kích thước ảnh nhỏ */
     height: 150px; /* Kích thước ảnh nhỏ */
-    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    // object-fit: cover; /* Đảm bảo ảnh không bị méo */
     border-radius: 10px; /* Bo góc ảnh */
-    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
     // border: 2px solid #ccc; /* Viền ảnh */
     transition: transform 0.3s; /* Hiệu ứng khi hover */
     gap:20px

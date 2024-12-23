@@ -19,6 +19,18 @@
   border-top: 1px solid #ddd;
   padding: 15px 0;
   align-items: center;
+  a {
+    text-decoration: none; /* Xóa gạch dưới */
+    color: inherit; /* Giữ màu của chữ giống như bình thường */
+  }
+
+  a:visited {
+    color: inherit; /* Giữ màu không thay đổi sau khi nhấp */
+  }
+
+  a:hover {
+    text-decoration: underline; /* Tạo hiệu ứng gạch dưới khi hover */
+  }
 }
 
 .cart-item img {

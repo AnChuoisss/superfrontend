@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom"; // Thêm Link
 import { useCart } from "../cart/CartContext.";
 import Header from "../Trangchu/Header";
 import "./ProductProfile.scss";
@@ -14,24 +14,27 @@ const ProductProfile = () => {
   const [quantity, setQuantity] = useState(1); // Quản lý số lượng
   const [relatedProducts, setRelatedProducts] = useState([]); // Sản phẩm liên quan
 
+
   const productList = [
-    { id: 1, name: "Clopheniramin 4mg", price: 100000, image: "/Clopheniramin 4mg.jpg", type: "thuoc", description: "Thuốc Clopheniramin giúp điều trị triệu chứng viêm mũi dị ứng", details: "Chi tiết sản phẩm..." },
+    { id: 1, name: "Thuốc Clopheniramin 4mg", price: 100000, image: "/clopheniramin1.webp", type: "thuoc", description: "Thuốc Clopheniramin giúp điều trị triệu chứng viêm mũi dị ứng", 
+      details:"Clorpheniramin maleat" ,ncc:"CÔNG TY CP DƯỢC PHẨM KHÁNH HÒA"},
     { id: 2, name: "Paracetamol 500mg", price: 200000, image: "/paracetamol.jpg", type: "thuoc" },
     { id: 3, name: "Veet Pure (Kem tẩy lông)", price: 150000, image: "/Veet Pure(Kem tay long).webp", type: "duoc-my-pham" },
     { id: 4, name: "Thuốc D", price: 180000, image: "https://via.placeholder.com/150", type: "thuoc" },
+    { id: 5, name: "Sữa bột Glucerna Abbott bổ sung dinh dưỡng đặc biệt cho người đái tháo đường (380g)", price: 389000, image: "/suaglucerna.webp", type: "thuc-pham-chuc-nang" },
   ];
 
   useEffect(() => {
     const selectedProduct = productList.find((product) => product.id === parseInt(productId));
     if (selectedProduct) {
       setProduct(selectedProduct);
-      // Tìm các sản phẩm liên quan
       const related = productList.filter(
         (p) => p.type === selectedProduct.type && p.id !== selectedProduct.id
       );
       setRelatedProducts(related);
     }
   }, [productId]);
+
 
   const handleQuantityChange = (e) => {
     const newQuantity = parseInt(e.target.value);
@@ -62,12 +65,12 @@ const ProductProfile = () => {
         </div>
         <div className="product-details">
           <h2>{product.name}</h2>
-          <p className="product-price">{product.price.toLocaleString("vi-VN")} VNĐ</p>
-          <p className="product-description">{product.description}</p>
-          <p className="product-details-text">{product.details}</p>
-
+          <p className="product-price"><b style={{fontSize:"30px"}}>{product.price.toLocaleString("vi-VN")} VNĐ</b>/Hộp</p>
+          <p className="product-description" style={{fontSize:"20px"}}><b style={{fontSize:"22px"}}>Mô tả ngắn: </b> {product.description}</p>
+          <p className="product-details-text" style={{fontSize:"22px"}}><b >Thành phần:</b> {product.details}</p>
+          <p className="product-details-text" style={{fontSize:"22px"}}><b >Nhà sản xuất</b> {product.ncc}</p>
           <div className="product-quantity">
-            <label>Số lượng:</label>
+            <label style={{fontSize:"22px"}}>Số lượng:</label>
             <input 
               type="number" 
               value={quantity} 
@@ -84,15 +87,17 @@ const ProductProfile = () => {
         </div>
       </div>
 
-      {/* Hiển thị sản phẩm liên quan */}
+
       <div className="related-products">
         <h3>Sản phẩm liên quan</h3>
         <div className="product-list">
           {relatedProducts.map((related) => (
             <div className="product-item " key={related.id} >
               <img src={related.image} alt={related.name} />
-              <h4>{related.name}</h4>
-              <p>{related.price.toLocaleString("vi-VN")} VNĐ</p>
+              <h4>
+                <Link to={`/products/${related.id}`}>{related.name}</Link>
+              </h4>
+              <p><b style={{fontSize:"14px"}}>{related.price.toLocaleString("vi-VN")} VNĐ</b>/Hộp </p>
               <button onClick={() => addToCart({ ...related, quantity: 1 })}>
                 Thêm vào giỏ hàng
               </button>
